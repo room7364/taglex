@@ -228,270 +228,270 @@
 
 <Perhaps her most productive period was her five-year stint as a foreign correspondent in New York
 
-to use something:
+?to use something:
 
-harness
-leverage
+?harness
+?leverage
 
-I @2form my democratic right by not voting in the election
-exercise
+>I @2form my democratic right by not voting in the election
+!exercise
 
-I exercised my democratic right by not voting in the election
+<I exercised my democratic right by not voting in the election
 
-behaviour:
+?behaviour:
 
-The club has a strict code (= set of rules) of @noun
-conduct
+>The club has a strict code (= set of rules) of @noun
+!conduct
 
-The club has a strict code (= set of rules) of conduct
+>The club has a strict code (= set of rules) of conduct
 
-брать на себя
+?брать на себя
 
-Egypt never again @2form (брал на себя) the role of an active and aggressive international power that it had enjoyed during much of the Old and New Kingdoms
-assume
+>Egypt never again @2form (брал на себя) the role of an active and aggressive international power that it had enjoyed during much of the Old and New Kingdoms
+!assume
 
-Egypt never again assumed the role of an active and aggressive international power that it had enjoyed during much of the Old and New Kingdoms
+<Egypt never again assumed the role of an active and aggressive international power that it had enjoyed during much of the Old and New Kingdoms
 
-to refuse to accept, use, or believe something or someone:
+?to refuse to accept, use, or believe something or someone:
 
-I applied for a job as a mechanic in a local garage, but I was @3form (= I was not offered the job)
-reject
+>I applied for a job as a mechanic in a local garage, but I was @3form (= I was not offered the job)
+!reject
 
-I applied for a job as a mechanic in a local garage, but I was rejected (= I was not offered the job)
+<I applied for a job as a mechanic in a local garage, but I was rejected (= I was not offered the job)
 
-something unusual, brave, or funny that someone has done:
+?something unusual, brave, or funny that someone has done:
 
-feat
+?feat
 
-She was telling me about her @plural while travelling around Africa
-exploit
+>She was telling me about her @plural while travelling around Africa
+!exploit
 
-She was telling me about her exploits while travelling around Africa
+<She was telling me about her exploits while travelling around Africa
 
-to deal with a task, problem, etc.:
+?to deal with a task, problem, etc.:
 
-We have some urgent business to @verb to
-attend
+>We have some urgent business to @verb to
+!attend
 
-We have some urgent business to attend to
+<We have some urgent business to attend to
 
-agreement (document)
-(of a document, authorization, or agreement) cease to be valid, typically after a fixed period of time
+?agreement (document)
+?(of a document, authorization, or agreement) cease to be valid, typically after a fixed period of time
 
-// The contract will @verb next month.
-expire
+>// The contract will @verb next month.
+!expire
 
-The contract will expire next month
+<The contract will expire next month
 
-agriculture
-@adj (пахотный) farming land is used for, or is suitable for, growing crops:
+#agriculture
+?@adj (пахотный) farming land is used for, or is suitable for, growing crops:
 
-@adj farming/farmers/farms/land
-arable
+>@adj farming/farmers/farms/land
+!arable
 
-arable farming/farmers/farms/land
+<arable farming/farmers/farms/land
 
-used to refer to cows that are used for producing milk, rather than meat, or to foods that are made from milk, such as cream, butter, and cheese:
+?used to refer to cows that are used for producing milk, rather than meat, or to foods that are made from milk, such as cream, butter, and cheese:
 
-You'll find all the yogurts in the @adj (молочный) section, madam
-dairy
+>You'll find all the yogurts in the @adj (молочный) section, madam
+!dairy
 
-You'll find all the yogurts in the dairy section, madam
+<You'll find all the yogurts in the dairy section, madam
 
-kill (animals) for food
+?kill (animals) for food
 
-butcher
-slaughter
+?butcher
+!slaughter
 
-instead of being slaughtered for meat as calves
+<instead of being slaughtered for meat as calves
 
-a young bovine animal, especially a domestic cow or bull in its first year
+?a young bovine animal, especially a domestic cow or bull in its first year
 
-@
+>@
 
-теленок
-calf
+?теленок
+!calf
 
-instead of being slaughtered for meat as calves
+<instead of being slaughtered for meat as calves
 
-grass that has been mown and dried for use as fodder
+?grass that has been mown and dried for use as fodder
 
-a bale of @noun
-hay
+>a bale of @noun
+!hay
 
-a bale of hay
+<a bale of hay
 
-farm animals regarded as an asset
+?farm animals regarded as an asset
 
-Dogs had a low susceptibility to the virus, and @noun – including pigs, chickens, and ducks – also did not appear to be significantly affected by it
-livestock
+>Dogs had a low susceptibility to the virus, and @noun – including pigs, chickens, and ducks – also did not appear to be significantly affected by it
+!livestock
 
-Dogs had a low susceptibility to the virus, and livestock – including pigs, chickens, and ducks – also did not appear to be significantly affected by it
+<Dogs had a low susceptibility to the virus, and livestock – including pigs, chickens, and ducks – also did not appear to be significantly affected by it
 
-to kill or cut up an animal for meat:
+?to kill or cut up an animal for meat:
 
-slaughter
+?slaughter
 
-He raises pigs and @verb+s his own meat
-butcher
+>He raises pigs and @verb+s his own meat
+!butcher
 
-He raises pigs and butchers his own meat
+<He raises pigs and butchers his own meat
 
-to prepare and use land for growing crops:
+?to prepare and use land for growing crops:
 
-plow
-cultivate
+?plow
+?cultivate
 
-пахать
+?пахать
 
-They @2form the soil and planted seeds
-till
+>They @2form the soil and planted seeds
+!till
 
-They tilled the soil and planted seeds
+<They tilled the soil and planted seeds
 
-the upper layer of earth in which plants grow, a black or dark brown material typically consisting of a mixture of organic remains, clay, and rock particles
+?the upper layer of earth in which plants grow, a black or dark brown material typically consisting of a mixture of organic remains, clay, and rock particles
 
-They tilled the @noun and planted seeds
-soil
+>They tilled the @noun and planted seeds
+!soil
 
-They tilled the soil and planted seeds
+<They tilled the soil and planted seeds
 
-to (cause animals to) eat grass:
+?to (cause animals to) eat grass:
 
-пасти, пастись
+?пасти, пастись
 
-The cows were @gerund
+>The cows were @gerund
 
-The farmer @verb+s cattle on this land in the summer months
-graze
+>The farmer @verb+s cattle on this land in the summer months
+!graze
 
-The cows were grazing
+<The cows were grazing
 
-The farmer grazes cattle on this land in the summer months
+MThe farmer grazes cattle on this land in the summer months
 
-a plant that is grown to produce grain:
+?a plant that is grown to produce grain:
 
-Wheat, rice, and corn are @plural
+>Wheat, rice, and corn are @plural
 
-злак
-cereal
+?злак
+!cereal
 
-Wheat, rice, and corn are cereals
+<Wheat, rice, and corn are cereals
 
-a plant that is a type of grass, or its grain used in baking and cooking or to feed animals:
+?a plant that is a type of grass, or its grain used in baking and cooking or to feed animals:
 
-овёс
+?овёс
 
-These biscuits contain @plural
-oats
+>These biscuits contain @plural
+!oats
 
-These biscuits contain oats
+<These biscuits contain oats
 
-to make animals move together as a group:
+?to make animals move together as a group:
 
-An old woman was @gerund the goats
+>An old woman was @gerund the goats
 
-a large group of animals of the same type that live and feed together:
+?a large group of animals of the same type that live and feed together:
 
-стадо
+?стадо
 
-a @noun of cattle/elephants/goats
-herd
+>a @noun of cattle/elephants/goats
+!herd
 
-An old woman was herding the goats
+<An old woman was herding the goats
 
-a herd of cattle/elephants/goats
+<a herd of cattle/elephants/goats
 
-a large farming tool with blades that digs the soil in fields so that seeds can be planted
+?a large farming tool with blades that digs the soil in fields so that seeds can be planted
 
-плуг, пахать плугом
-till
+?плуг, пахать плугом
+?till
 
-Farmers start @gerund in the spring
-plough, plow
+>Farmers start @gerund in the spring
+!plough, plow
 
-Farmers start ploughing in the spring
+<Farmers start ploughing in the spring
 
-to put seeds in or on the ground so that plants will grow:
+?to put seeds in or on the ground so that plants will grow:
 
-We'll @verb this field with barley
-sow
+>We'll @verb this field with barley
+!sow
 
-We'll sow this field with barley
+<We'll sow this field with barley
 
-a garden tool with a long handle and a short blade used to remove weeds and break up the surface of the ground
+?a garden tool with a long handle and a short blade used to remove weeds and break up the surface of the ground
 
-мотыга, тяпка
+?мотыга, тяпка
 
-Farmers mostly used a digging @noun for land preparation
-hoe
+>Farmers mostly used a digging @noun for land preparation
+!hoe
 
-Farmers mostly used a digging hoe for land preparation
+<Farmers mostly used a digging hoe for land preparation
 
-to mark an animal such as a cow by burning or freezing its skin to show you own it:
+?to mark an animal such as a cow by burning or freezing its skin to show you own it:
 
-The cattle were rounded up and @3form
-brand
+>The cattle were rounded up and @3form
+!brand
 
-The cattle were rounded up and branded
+<The cattle were rounded up and branded
 
-any wild plant that grows in an unwanted place, especially in a garden or field where it prevents the cultivated plants from
-growing freely
+?any wild plant that grows in an unwanted place, especially in a garden or field where it prevents the cultivated plants from
+?growing freely
 
-сорняк
-weed
+?сорняк
+!weed
 
-to cut and collect a grain crop
-reap
+?to cut and collect a grain crop
+!reap
 
-amount
-to increase a lot and suddenly in number:
+#amount
+?to increase a lot and suddenly in number:
 
-enlarge
-surge
-augment
-swell
+?enlarge
+?surge
+?augment
+?swell
 
-Small businesses have @3form in the last ten years
-proliferate
+>Small businesses have @3form in the last ten years
+!proliferate
 
-Small businesses have proliferated in the last ten years
+<Small businesses have proliferated in the last ten years
 
-become or make smaller in size or amount
+?become or make smaller in size or amount
 
-diminish
-reduce
-truncate
-curtail
+?diminish
+?reduce
+?truncate
+?curtail
 
-As concrete dries, it @verb+s
-shrink
+>As concrete dries, it @verb+s
+!shrink
 
-As concrete dries, it shrinks
+<As concrete dries, it shrinks
 
-existing or occurring in large amounts : AMPLE
+?existing or occurring in large amounts : AMPLE
 
-abound
-profuse
-copious
-abundant
+?abound
+?profuse
+?copious
+!abundant
 
-but it was not an economy, because everything was available in unlimited abundance
+<but it was not an economy, because everything was available in unlimited abundance
 
-present or noticeable in every part of a thing or place:
+?present or noticeable in every part of a thing or place:
 
-The influence of Freud is @adj in her books
-pervasive
+>The influence of Freud is @adj in her books
+!pervasive
 
-The influence of Freud is pervasive in her books
+<The influence of Freud is pervasive in her books
 
-enough or more than enough; plentiful
-// You'll have @adj opportunity to ask questions after the talk
+?enough or more than enough; plentiful
+>// You'll have @adj opportunity to ask questions after the talk
 
-abundant
-superfluous
-redundant
-ample
+?abundant
+?superfluous
+?redundant
+!ample
 
 You'll have ample opportunity to ask questions after the talk
 
