@@ -1,3 +1,4 @@
+require 'base64'
 require 'net/http'
 require 'json'
 require 'securerandom'
@@ -15,7 +16,7 @@ module Couch
       @name = name
     end
     def push(doc)
-      uri = URI("http://#{Host}/#{@name.to_s}/#{SecureRandom.uuid}")
+      uri = URI("http://#{Host}/#{@name}/#{SecureRandom.uuid}")
       Net::HTTP.start(uri.host, uri.port) do |http|
         request = Net::HTTP::Put.new uri
         request.basic_auth Login, Password
@@ -33,6 +34,22 @@ module Couch
         body = JSON.generate({selector: JSON.parse(body)})
         request.body = body
         response = http.request request
+        return response.body
+      end
+    end
+    def replicate(to_name)
+      uri = URI("http://#{Host}/_replicate")
+      Net::HTTP.start(uri.host, uri.port) do |http|
+        request = Net::HTTP::Post.new uri
+        request.basic_auth Login, Password
+        request['Content-Type'] = 'application/json'
+        query = {
+          source: @name,
+          target: to_name
+        }
+        request.body = JSON.generate query
+        response = http.request request
+        raise BadResponse, response.body if not JSON.parse(response.body)["ok"]
         return response.body
       end
     end
