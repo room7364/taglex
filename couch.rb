@@ -32,6 +32,35 @@ module Couch
         return response
       end
     end
+    def view(view_name)
+      uri = URI("http://#{Host}/#{@name}/_design/main/_view/#{view_name}")
+      Net::HTTP.start(uri.host, uri.port) do |http|
+        request = Net::HTTP::Get.new uri
+        request.basic_auth Login, Password
+        response = http.request request
+        raise BadResponse, response.body if not JSON.parse(response.body)["ok"]
+        return response
+      end
+    end
+    def get(id)
+      uri = URI("http://#{Host}/#{@name}/#{id}")
+      Net::HTTP.start(uri.host, uri.port) do |http|
+        request = Net::HTTP::Get.new uri
+        request.basic_auth Login, Password
+        response = http.request request
+        return response.body
+      end
+    end
+    def find(view_name, key)
+      uri = URI("http://#{Host}/#{@name}/_design/main/_view/#{view_name}?key=\"#{key}\"")
+      Net::HTTP.start(uri.host, uri.port) do |http|
+        request = Net::HTTP::Get.new uri
+        request.basic_auth Login, Password
+        response = http.request request
+        docs = JSON.parse(response.body)["rows"].map { |row| self.get(row["id"]) }
+        return docs 
+      end
+    end
     def push(doc)
       uri = URI("http://#{Host}/#{@name}/#{SecureRandom.uuid}")
       Net::HTTP.start(uri.host, uri.port) do |http|
