@@ -15,6 +15,23 @@ module Couch
     def initialize(name)
       @name = name
     end
+    def map(view_name, js_func)
+      uri = URI("http://#{Host}/#{@name}/_design/main")
+      Net::HTTP.start(uri.host, uri.port) do |http|
+        request = Net::HTTP::Put.new uri
+        request.basic_auth Login, Password
+        request.body = JSON.generate({
+          views: {
+           view_name => {
+             map: js_func
+           }
+          }
+        }) 
+        response = http.request request
+        raise BadResponse, response.body if not JSON.parse(response.body)["ok"]
+        return response
+      end
+    end
     def push(doc)
       uri = URI("http://#{Host}/#{@name}/#{SecureRandom.uuid}")
       Net::HTTP.start(uri.host, uri.port) do |http|
