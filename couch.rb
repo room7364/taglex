@@ -12,8 +12,22 @@ module Couch
   Login = config["login"]
   Password = config["password"]
   class Table
+    class View
+      def initialize(name)
+        @name = name
+      end
+    end
     def initialize(name)
       @name = name
+    end
+    def views
+      uri = URI("http://#{Host}/#{@name}/_design/main")
+      Net::HTTP.start(uri.host, uri.port) do |http|
+        request = Net::HTTP::Get.new uri
+        request.basic_auth Login, Password
+        response = http.request request
+        return JSON.parse(response.body)['views'].keys
+      end
     end
     def map(view_name, js_func)
       uri = URI("http://#{Host}/#{@name}/_design/main")
