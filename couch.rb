@@ -12,13 +12,29 @@ module Couch
   Login = config["login"]
   Password = config["password"]
   class Table
+    attr_reader :name
     class View
-      def initialize(name)
+      attr_reader :name, :table
+      def initialize(table, name)
         @name = name
+        @table = table
+      end
+      def find(key)
+        uri = URI("http://#{Host}/#{@table.name}/_design/main/_view/#{@name}?key=\"#{key}\"")
+        Net::HTTP.start(uri.host, uri.port) do |http|
+          request = Net::HTTP::Get.new uri
+          request.basic_auth Login, Password
+          response = http.request request
+          docs = JSON.parse(response.body)["rows"].map { |row| @table.get(row["id"]) }
+          return docs 
+        end
       end
     end
     def initialize(name)
       @name = name
+    end
+    def [](view_name)
+      View.new self, view_name
     end
     def views
       uri = URI("http://#{Host}/#{@name}/_design/main")
