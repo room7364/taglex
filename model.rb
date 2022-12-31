@@ -1,4 +1,4 @@
-load 'couch.rb'
+load 'couch/couch.rb'
 require 'json'
 module Model
   def self.find(word)

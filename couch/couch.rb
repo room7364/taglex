@@ -5,7 +5,7 @@ require 'securerandom'
 module Couch
   class BadResponse < Exception
   end
-  config_file = File.open "./config.json"
+  config_file = File.open "./couch/config.json"
   config = JSON.load config_file
   config_file.close
   Host = "#{config['host']}:5984"
