@@ -1,2 +1,32 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8"/>
+</head>
 <% load 'model.rb' %>
-<%= Model.find(servlet_request.query["word"]).to_s %>
+<% result = Model.find(servlet_request.query["word"]) %>
+<h1>Face</h1>
+    <h2>Questions</h2>
+        <ul>
+          <% result["face"]["questions"].each do |line| %>
+            <li><%= line %></li>
+          <% end %>
+        </ul>
+    <h2>Examples</h2>
+        <ul>
+          <% result["face"]["examples"].each do |line| %>
+            <li><%= line %></li>
+          <% end %>
+        </ul>
+<h1>Back</h1>
+    <h2>Answers</h2>
+        <ul>
+          <% result["back"]["answers"].each do |line| %>
+            <li><%= line %></li>
+          <% end %>
+        </ul>
+    <h2>Examples</h2>
+        <ul>
+          <% result["back"]["examples"].each do |line| %>
+            <li><%= line %></li>
+          <% end %>
+        </ul>
