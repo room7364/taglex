@@ -1,4 +1,5 @@
 require 'webrick'
+load 'model.rb'
 
 server = WEBrick::HTTPServer.new Port: 8080
 WEBrick::HTTPUtils::DefaultMimeTypes.store('rhtml', 'text/html')

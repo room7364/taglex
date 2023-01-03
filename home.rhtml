@@ -9,7 +9,6 @@
 </form>
 
 <% if servlet_request.request_method == "POST" then %>
-  <% load 'model.rb' %>
   <% result = Model.find(servlet_request.query["word"]) %>
   <h1>Face</h1>
       <h2>Questions</h2>
