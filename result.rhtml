@@ -1,0 +1,2 @@
+<% load 'model.rb' %>
+<%= Model.find(servlet_request.query["word"]).to_s %>
