@@ -12,40 +12,46 @@
   </head>
 
   <body>
-    <form action="http://localhost:8080/home.rhtml" method="POST">
+    <form class="container" action="http://localhost:8080/home.rhtml" method="POST">
       <input name="word" id="word" />
       <button>Submit</button>
     </form>
 
     <% if servlet_request.request_method == "POST" then %>
       <% result = Model.find(servlet_request.query["word"]) %>
-      <div class="card">
-        <h5>Face</h5>
-            <h6>Questions</h6>
-                <ul>
-                  <% result["face"]["questions"].each do |line| %>
-                    <li><%= line %></li>
-                  <% end %>
-                </ul>
-            <h6>Examples</h6>
-                <ul>
-                  <% result["face"]["examples"].each do |line| %>
-                    <li><%= line %></li>
-                  <% end %>
-                </ul>
-        <h5>Back</h5>
-            <h6>Answers</h6>
-                <ul>
-                  <% result["back"]["answers"].each do |line| %>
-                    <li><%= line %></li>
-                  <% end %>
-                </ul>
-            <h6>Examples</h6>
-                <ul>
-                  <% result["back"]["examples"].each do |line| %>
-                    <li><%= line %></li>
-                  <% end %>
-                </ul>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h5>Face</h5>
+                <h6>Questions</h6>
+                    <ul>
+                      <% result["face"]["questions"].each do |line| %>
+                        <li><%= line %></li>
+                      <% end %>
+                    </ul>
+                <h6>Examples</h6>
+                    <ul>
+                      <% result["face"]["examples"].each do |line| %>
+                        <li><%= line %></li>
+                      <% end %>
+                    </ul>
+          </div>
+          <div class="col">
+            <h5>Back</h5>
+                <h6>Answers</h6>
+                    <ul>
+                      <% result["back"]["answers"].each do |line| %>
+                        <li><%= line %></li>
+                      <% end %>
+                    </ul>
+                <h6>Examples</h6>
+                    <ul>
+                      <% result["back"]["examples"].each do |line| %>
+                        <li><%= line %></li>
+                      <% end %>
+                    </ul>
+          </div>
+        </div>
       </div>
       <% end %>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
