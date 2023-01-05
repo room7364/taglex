@@ -15,7 +15,7 @@ module Model
     end
   end
   def self.find(word)
-    responses = Couch['taglex']['words'].find word
+    responses = Couch::Docs.select table: "taglex", attr: "words", value: word
     data = responses.map { |response| JSON.parse response }
     data.map do |card|
       card.filter { |key, value| key[0] != '_' }
