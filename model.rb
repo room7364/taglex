@@ -8,7 +8,8 @@ module Model
       response = http.request request
       data = JSON.parse(response.body)
       arrays = data.map { |elem| elem['meta']['stems'] }
-      arrays.inject { |accum, array| accum + array }
+      stems = arrays.inject { |accum, array| accum + array }
+      stems.filter { |stem| stem.split.size == 1 }
     end
   end
   def self.find(word)
