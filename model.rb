@@ -10,7 +10,8 @@ module Model
       return data if data.size == 0
       arrays = data.map { |elem| elem['meta']['stems'] }
       stems = arrays.inject { |accum, array| accum + array }
-      stems.filter { |stem| stem.split.size == 1 }
+      stems.filter! { |stem| stem.split.size == 1 }
+      stems.uniq
     end
   end
   def self.find(word)
