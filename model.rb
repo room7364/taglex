@@ -7,6 +7,7 @@ module Model
       request = Net::HTTP::Get.new uri
       response = http.request request
       data = JSON.parse(response.body)
+      return data if data.size == 0
       arrays = data.map { |elem| elem['meta']['stems'] }
       stems = arrays.inject { |accum, array| accum + array }
       stems.filter { |stem| stem.split.size == 1 }
