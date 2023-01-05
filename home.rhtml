@@ -18,7 +18,9 @@
     </form>
 
     <% if servlet_request.request_method == "POST" then %>
-      <% Model.stems(servlet_request.query["word"]).each do |word| %>
+      <% stems = Model.stems(servlet_request.query["word"]) %>
+      <p><%= stems.to_s %></p>
+      <% stems.each do |word| %>
         <% results = Model.find word %>
         <% if results.size != 0 then %>
           <h4><%= word %></h4>
