@@ -110,7 +110,7 @@ module Couch
         return docs 
       end
     end
-    def refresh(table:, id:, doc:)
+    def self.refresh(table:, id:, doc:)
       source = self.get table: table, id: id
       revision = JSON.parse(source)["_rev"]
       data = JSON.parse doc

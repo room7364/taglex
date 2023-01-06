@@ -7,12 +7,12 @@ server.mount '/', WEBrick::HTTPServlet::FileHandler, '/home/oleg/taglex'
 server.mount_proc '/refresh' do |request, response|
   data = {
     face: {
-      questions: request.query['face_questions'].split("\n\n"),
-      examples: request.query['face_examples'].split("\n\n")
+      questions: request.query['face_questions'].force_encoding('utf-8').split("\n\n"),
+      examples: request.query['face_examples'].force_encoding('utf-8').split("\n\n")
     },
     back: {
-      answers: request.query['back_answers'].split("\n\n"),
-      examples: request.query['back_examples'].split("\n\n")
+      answers: request.query['back_answers'].force_encoding('utf-8').split("\n\n"),
+      examples: request.query['back_examples'].force_encoding('utf-8').split("\n\n")
     }
   }
   id = request.query['id']
