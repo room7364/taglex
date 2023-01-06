@@ -1,0 +1,5 @@
+<%=servlet_request.query['id']%>
+<form action="http://localhost:8080/test.rhtml">
+  <input type='hidden' name='id' value="<%=id = "#{servlet_request.query["id"]}HELLO"%>">
+  <input type="submit" value="Go!" />
+</form>

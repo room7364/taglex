@@ -14,11 +14,14 @@ module Model
       stems.uniq
     end
   end
+  def self.get(id)
+    JSON.parse Couch::Docs.get(table: "taglex", id: id)
+  end
   def self.find(word)
     responses = Couch::Docs.select table: "taglex", attr: "words", value: word
-    data = responses.map { |response| JSON.parse response }
-    data.map do |card|
-      card.filter { |key, value| key[0] != '_' }
-    end
+    responses.map { |response| JSON.parse response }
+  end
+  def self.refresh(id:, data:)
+    Couch::Docs.refresh table: "taglex", id: id, doc: JSON.generate(data)
   end
 end

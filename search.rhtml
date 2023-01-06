@@ -58,6 +58,11 @@
                           </ul>
                 </div>
               </div>
+
+              <form action="http://localhost:8080/edit.rhtml">
+                  <input type="submit" value="Edit this card" >
+                  <input type='hidden' name='id' value="<%=result['_id']%>">
+              </form>
             </div>
           <% end %>
         <% end %>
