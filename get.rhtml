@@ -12,6 +12,11 @@
   </head>
 
   <body>
+    <form class="container" action="http://localhost:8080/search.rhtml" method="POST">
+      <input name="word" id="word" />
+      <button>Search</button>
+    </form>
+
     <% result = Model.get servlet_request.query['id']  %>
 
     <div class="container border border-3 border-dark">
