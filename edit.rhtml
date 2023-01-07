@@ -14,37 +14,37 @@
   <body>
 
     <form action="http://localhost:8080/refresh"
-          method="POST" 
-          class="container border border-3 border-dark">
+          method="POST"
+          class="container" >
+
       <input type='hidden' name='id' value="<%=id = "#{servlet_request.query["id"]}"%>">
-
       <% results = Model.get id%>
-      <div class="row">
-        <div class="col border border-1">
-          <h5>Face</h5>
-              <h6>Questions</h6>
-                <textarea name="face_questions">
-                  <%= results["face"]["questions"].inject { |text, line| "#{text}\n\n#{line}" } %>
-                </textarea>
-              <h6>Examples</h6>
-                <textarea name="face_examples">
-                  <%= results["face"]["examples"].inject { |text, line| "#{text}\n\n#{line}" } %>
-                </textarea>
+      <h5>Face</h5>
+        <div class="mb-3">
+          <label for="fq" class="form-label">Questions</label>
+          <textarea id="fq" name="face_questions" class="form-control" rows="10">
+            <%= results["face"]["questions"].inject { |text, line| "#{text}\n\n#{line}" } %>
+          </textarea>
         </div>
-
-        <div class="col border border-1">
-          <h5>Back</h5>
-              <h6>Answers</h6>
-                <textarea name="back_answers">
-                  <%= results["back"]["answers"].inject { |text, line| "#{text}\n\n#{line}" } %>
-                </textarea>
-              <h6>Examples</h6>
-                <textarea name="back_examples">
-                  <%= results["back"]["examples"].inject { |text, line| "#{text}\n\n#{line}" } %>
-                </textarea>
+        <div class="mb-3">
+          <label for="fe" class="form-label">Examples</label>
+          <textarea id="fe" name="face_examples" class="form-control" rows="10">
+            <%= results["face"]["examples"].inject { |text, line| "#{text}\n\n#{line}" } %>
+          </textarea>
         </div>
-      </div>
-
+      <h5>Back</h5>
+        <div class="mb-3">
+          <label for="ba" class="form-label">Answers</label>
+          <textarea id="ba" name="back_answers" class="form-control" rows="10">
+            <%= results["back"]["answers"].inject { |text, line| "#{text}\n\n#{line}" } %>
+          </textarea>
+        </div>
+        <div class="mb-3">
+          <label for="be" class="form-label">Examples</label>
+          <textarea id="be" name="back_examples" class="form-control" rows="10">
+            <%= results["back"]["examples"].inject { |text, line| "#{text}\n\n#{line}" } %>
+          </textarea>
+        </div>
       <button>Submit</button>
 
     </form>
