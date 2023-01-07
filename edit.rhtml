@@ -45,6 +45,12 @@
             <%= results["back"]["examples"].inject { |text, line| "#{text}\n\n#{line}" } %>
           </textarea>
         </div>
+        <div class="mb-3">
+          <label for="tags" class="form-label">Tags:</label>
+          <textarea id="tags" name="tags" class="form-control" rows="10">
+            <%= results['tags'] ? results['tags'].inject { |text, statement| "#{text}, #{statement}" } : "None" %>
+          </textarea>
+        </div>
       <button>Submit</button>
 
     </form>

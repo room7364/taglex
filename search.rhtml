@@ -59,6 +59,10 @@
                           </ul>
                 </div>
               </div>
+              <div class="row">
+                <h5>Tags:</h5>
+                <p> <%= result['tags'] ? result['tags'].inject { |text, statement| "#{text}, #{statement}" } : "None" %> </p>
+              </div>
 
               <form action="http://localhost:8080/edit.rhtml">
                   <input type="submit" value="Edit this card" >
