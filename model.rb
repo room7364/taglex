@@ -17,11 +17,23 @@ module Model
   def self.get(id)
     JSON.parse Couch::Docs.get(table: "taglex", id: id)
   end
+  def self.oldest
+    JSON.parse Couch::Docs.oldest("taglex")
+  end
   def self.find(word)
     responses = Couch::Docs.select table: "taglex", attr: "words", value: word
     responses.map { |response| JSON.parse response }
   end
   def self.refresh(id:, data:)
     Couch::Docs.refresh table: "taglex", id: id, doc: JSON.generate(data)
+  end
+  def self.quested(id)
+    data = self.get id
+    if data['quested'] then
+      data['quested'] = data['quested'] + 1
+    else
+      data['quested'] = 1
+    end
+    self.refresh id:id, data: data
   end
 end

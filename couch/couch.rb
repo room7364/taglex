@@ -91,6 +91,17 @@ module Couch
     end
   end
   module Docs
+    def self.oldest(table)
+      uri = URI("http://#{Host}/#{table}/_changes?limit=1")
+      Net::HTTP.start(uri.host, uri.port) do |http|
+        request = Net::HTTP::Get.new uri
+        request.basic_auth Login, Password
+        response = http.request request
+        data = JSON.parse response.body
+        id = data['results'][0]['id']
+        return self.get table: table, id: id
+      end
+    end
     def self.get(table:, id:)
       uri = URI("http://#{Host}/#{table}/#{id}")
       Net::HTTP.start(uri.host, uri.port) do |http|

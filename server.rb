@@ -19,5 +19,9 @@ server.mount_proc '/refresh' do |request, response|
   Model.refresh id: id, data: data
   response.set_redirect(WEBrick::HTTPStatus::TemporaryRedirect, "/get.rhtml?id=#{id}")
 end
+server.mount_proc '/quested' do |request, response|
+  Model.quested request.query['id']
+  response.set_redirect(WEBrick::HTTPStatus::TemporaryRedirect, "/quest.rhtml")
+end
 trap 'INT' do server.shutdown end
 server.start

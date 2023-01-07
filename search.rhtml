@@ -26,6 +26,7 @@
           <h4><%= word %></h4>
           <% results.each do |result| %>
             <div class="container border border-3 border-dark">
+            <p>Quested <%= result['quested'] ? result['quested'] : '0' %> times</p>
               <div class="row">
                 <div class="col border border-1">
                   <h5>Face</h5>

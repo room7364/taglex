@@ -12,15 +12,18 @@
   </head>
 
   <body>
-    <form class="container" action="http://localhost:8080/search.rhtml" method="POST">
-      <input name="word" id="word" />
-      <button>Search</button>
-    </form>
 
-    <% result = Model.get servlet_request.query['id']  %>
+    <div class="container">
+      <button onclick="displayBack()">Display back</button>
+      <% result = Model.oldest  %>
+      <form action="http://localhost:8080/quested">
+        <input type='hidden' name='id' value="<%= result["_id"]%>">
+        <button id="quested" style="visibility:hidden;">Quested</button>
+      </form>
+      <p>Already quested <%= result['quested'] ? result['quested'] : '0' %> times</p>
+    </div>
 
     <div class="container border border-3 border-dark">
-      <p>Quested <%= result['quested'] ? result['quested'] : '0' %> times</p>
       <div class="row">
         <div class="col border border-1">
           <h5>Face</h5>
@@ -37,7 +40,7 @@
                     <% end %>
                   </ul>
         </div>
-        <div class="col border border-1">
+        <div class="col border border-1" id="back" style="visibility:hidden;">
           <h5>Back</h5>
               <h6>Answers</h6>
                   <ul>
@@ -58,6 +61,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
             integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" 
             crossorigin="anonymous">
+    </script>
+    <script>
+      function displayBack() {
+        document.getElementById("back").style.visibility = "visible";
+        document.getElementById("quested").style.visibility = "visible";
+      }
     </script>
   </body>
 </html>
