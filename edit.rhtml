@@ -16,42 +16,33 @@
     <form action="http://localhost:8080/refresh"
           method="POST"
           class="container" >
+      <button class=mb-3>Submit</button>
 
       <input type='hidden' name='id' value="<%=id = "#{servlet_request.query["id"]}"%>">
       <% results = Model.get id%>
+      <div class="mb-3">
+        <label for="tags" class="form-label">Tags:</label>
+        <textarea id="tags" name="tags" class="form-control" rows="10"><%= if results['tags'] then results['tags'].inject { |text, statement| "#{text}, #{statement}" } end %></textarea>
+      </div>
       <h5>Face</h5>
         <div class="mb-3">
           <label for="fq" class="form-label">Questions</label>
-          <textarea id="fq" name="face_questions" class="form-control" rows="10">
-            <%= results["face"]["questions"].inject { |text, line| "#{text}\n\n#{line}" } %>
-          </textarea>
+          <textarea id="fq" name="face_questions" class="form-control" rows="10"><%= results["face"]["questions"].inject { |text, line| "#{text}\n\n#{line}" } %></textarea>
         </div>
         <div class="mb-3">
           <label for="fe" class="form-label">Examples</label>
-          <textarea id="fe" name="face_examples" class="form-control" rows="10">
-            <%= results["face"]["examples"].inject { |text, line| "#{text}\n\n#{line}" } %>
-          </textarea>
+          <textarea id="fe" name="face_examples" class="form-control" rows="10"><%= results["face"]["examples"].inject { |text, line| "#{text}\n\n#{line}" } %></textarea>
         </div>
       <h5>Back</h5>
         <div class="mb-3">
           <label for="ba" class="form-label">Answers</label>
-          <textarea id="ba" name="back_answers" class="form-control" rows="10">
-            <%= results["back"]["answers"].inject { |text, line| "#{text}\n\n#{line}" } %>
-          </textarea>
+          <textarea id="ba" name="back_answers" class="form-control" rows="10"><%= results["back"]["answers"].inject { |text, line| "#{text}\n\n#{line}" } %></textarea>
         </div>
         <div class="mb-3">
           <label for="be" class="form-label">Examples</label>
-          <textarea id="be" name="back_examples" class="form-control" rows="10">
-            <%= results["back"]["examples"].inject { |text, line| "#{text}\n\n#{line}" } %>
-          </textarea>
+          <textarea id="be" name="back_examples" class="form-control" rows="10"><%= results["back"]["examples"].inject { |text, line| "#{text}\n\n#{line}" } %></textarea>
         </div>
-        <div class="mb-3">
-          <label for="tags" class="form-label">Tags:</label>
-          <textarea id="tags" name="tags" class="form-control" rows="10">
-            <%= results['tags'] ? results['tags'].inject { |text, statement| "#{text}, #{statement}" } : "None" %>
-          </textarea>
-        </div>
-      <button>Submit</button>
+
 
     </form>
 
