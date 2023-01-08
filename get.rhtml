@@ -12,12 +12,13 @@
   </head>
 
   <body>
-    <form class="container" action="http://localhost:8080/search.rhtml" method="POST">
-      <input name="word" id="word" />
-      <button>Search</button>
-    </form>
-
-    <a href="http://localhost:8080/quest.rhtml">Quest</a>
+    <div class="container">
+      <form action="http://localhost:8080/search.rhtml" method="POST">
+        <input name="word" id="word" />
+        <button>Search</button>
+      </form>
+      <a href="http://localhost:8080/quest.rhtml">Quest</a>
+    </div>
 
     <% result = Model.get servlet_request.query['id']  %>
 
